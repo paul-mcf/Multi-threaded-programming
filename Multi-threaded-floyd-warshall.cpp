@@ -36,23 +36,16 @@ int main() {
 			}
 		}
 	}
-
-	
 	int n{ Nodes };
 	vector<thread> T;
-
 	for (int k = 0; k < Nodes; ++k) {
-
 		T.emplace_back(FW, ref(Dist), ref(Next), k, 0, n / 2 - 1, 0, n / 2 - 1);
 		T.emplace_back(FW, ref(Dist), ref(Next), k,  n / 2, n - 1, 0, n / 2 - 1);
 		T.emplace_back(FW, ref(Dist), ref(Next), k, 0, n / 2 - 1, n / 2, n - 1);
-
 		FW(Dist, Next, k, n / 2, n - 1, n / 2, n - 1);
 		for (auto& i : T) i.join();
 		T.clear();
 	}
-
-
 	cout << "Dist Matrix" << endl;
 	for (auto& i : Dist) {
 		for (auto& j : i) {
