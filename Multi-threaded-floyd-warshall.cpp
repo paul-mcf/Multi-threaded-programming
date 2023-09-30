@@ -11,6 +11,7 @@ void FW(vector<vector<int>>& Dist, vector<vector<int>>& Next, int k, int r1, int
 int main() {
 	int Nodes, Edges;
 	ifstream In("graph1.txt");
+	//Enter the nodes and edges
 	In >> Nodes >> Edges;
 	vector < list<pair<int, int>>> Graph(Nodes);
 	for (int i = 0; i < Edges; ++i) {
