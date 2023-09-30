@@ -9,6 +9,7 @@ using namespace std;
 void FW(vector<vector<int>>& Dist, vector<vector<int>>& Next, int k, int r1, int r2, int c1, int c2);
 //main function
 int main() {
+	//initializing nodes
 	int Nodes, Edges;
 	ifstream In("graph1.txt");
 	In >> Nodes >> Edges;
