@@ -22,6 +22,7 @@ int main() {
 	}
 	//Close the input stream
 	In.close();
+	//Initialize a distance and next node matrix
 	vector<vector<int>> Dist(Nodes, vector<int>(Nodes, 9999));
 	vector<vector<int>> Next(Nodes, vector<int>(Nodes, -1));
 	for (int i = 0; i < Nodes; ++i) {
