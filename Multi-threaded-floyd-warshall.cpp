@@ -9,6 +9,7 @@ using namespace std;
 void FW(vector<vector<int>>& Dist, vector<vector<int>>& Next, int k, int r1, int r2, int c1, int c2);
 //main function
 int main() {
+	//initializing nodes
 	int Nodes, Edges;
 	ifstream In("graph1.txt");
 	//Enter the nodes and edges
@@ -19,7 +20,9 @@ int main() {
 		In >> a >> b >> c;
 		Graph[a].push_back({ b,c });
 	}
+	//Close the input stream
 	In.close();
+	//Initialize a distance and next node matrix
 	vector<vector<int>> Dist(Nodes, vector<int>(Nodes, 9999));
 	vector<vector<int>> Next(Nodes, vector<int>(Nodes, -1));
 	for (int i = 0; i < Nodes; ++i) {
