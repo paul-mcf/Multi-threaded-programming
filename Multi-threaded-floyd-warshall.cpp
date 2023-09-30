@@ -12,6 +12,7 @@ int main() {
 	//initializing nodes
 	int Nodes, Edges;
 	ifstream In("graph1.txt");
+	//Enter the nodes
 	In >> Nodes >> Edges;
 	vector < list<pair<int, int>>> Graph(Nodes);
 	for (int i = 0; i < Edges; ++i) {
