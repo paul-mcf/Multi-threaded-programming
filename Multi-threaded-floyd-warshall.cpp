@@ -7,13 +7,11 @@
 using namespace std;
 
 void FW(vector<vector<int>>& Dist, vector<vector<int>>& Next, int k, int r1, int r2, int c1, int c2);
-
+//main function
 int main() {
-
 	int Nodes, Edges;
 	ifstream In("graph1.txt");
 	In >> Nodes >> Edges;
-
 	vector < list<pair<int, int>>> Graph(Nodes);
 	for (int i = 0; i < Edges; ++i) {
 		int a, b, c;
@@ -64,7 +62,6 @@ int main() {
 	}
 	return 0;
 }
-
 void FW(vector<vector<int>>& Dist, vector<vector<int>>& Next, int k, int r1, int r2, int c1, int c2) {
 		for (int i = r1; i <= r2; ++i) {
 			for (int j = c1; j <= c2; ++j) {
@@ -72,9 +69,6 @@ void FW(vector<vector<int>>& Dist, vector<vector<int>>& Next, int k, int r1, int
 					Dist[i][j] = Dist[i][k] + Dist[k][j];
 					Next[i][j] = Next[i][k];
 				}
-
 			}
 		}
 }
-
-
