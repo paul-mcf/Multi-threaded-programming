@@ -66,7 +66,7 @@ int main() {
 	}
 	return 0;
 }
-// Main Floyd-Warshall function
+// Floyd-Warshall function
 void FW(vector<vector<int>>& Dist, vector<vector<int>>& Next, int k, int r1, int r2, int c1, int c2) {
 		for (int i = r1; i <= r2; ++i) {
 			for (int j = c1; j <= c2; ++j) {
